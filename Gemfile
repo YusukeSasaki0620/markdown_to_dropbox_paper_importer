@@ -7,3 +7,5 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 # gem "rails"
 
 gem "dropbox_api", "~> 0.1.19"
+
+gem "dotenv", "~> 2.7"
