@@ -23,6 +23,9 @@ Dir.glob("**/*") do |item|
       pp "folder [ #{item} ] exsist. continue."
     end
   else
+    File.open(item) do |file|
 
+      client.paper_create("/#{item}", file, import_format: :markdown )
+    end
   end
 end
