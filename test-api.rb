@@ -4,13 +4,7 @@ require "fileutils"
 
 client = DropboxApi::Client.new
 INPUT_DIR = "input_files/"
-
-# begin
-#   client.create_folder("/hoge")
-# rescue DropboxApi::Errors::FolderConflictError => exception
-#   pp 'folder exsist. continue.'
-# end
-
+PAPER_EXT = ".paper"
 
 Dir.chdir(INPUT_DIR)
 Dir.glob("**/*") do |item|
@@ -23,9 +17,10 @@ Dir.glob("**/*") do |item|
       pp "folder [ #{item} ] exsist. continue."
     end
   else
+    peper_path = Pathname(item).sub_ext(PAPER_EXT)
+    pp "create #{peper_path}"
     File.open(item) do |file|
-
-      client.paper_create("/#{item}", file, import_format: :markdown )
+      client.paper_create("/#{peper_path}", file, import_format: :markdown )
     end
   end
 end
