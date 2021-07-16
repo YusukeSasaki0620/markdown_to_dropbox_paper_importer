@@ -1,5 +1,7 @@
-PATH
-  remote: ../dropbox_api
+GIT
+  remote: git@github.com:YusukeSasaki0620/dropbox_api.git
+  revision: 469ed31c5c87bf643429e809e275ecd8cb1dc9b7
+  branch: feat/add-paper-api
   specs:
     dropbox_api (0.1.19)
       faraday (~> 1.0)
@@ -9,7 +11,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     dotenv (2.7.6)
-    faraday (1.5.0)
+    faraday (1.5.1)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
       faraday-excon (~> 1.1)
@@ -24,7 +26,7 @@ GEM
     faraday-excon (1.1.0)
     faraday-httpclient (1.0.1)
     faraday-net_http (1.0.1)
-    faraday-net_http_persistent (1.1.0)
+    faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     jwt (2.2.3)
     multi_json (1.15.0)
@@ -37,7 +39,7 @@ GEM
       multi_xml (~> 0.5)
       rack (>= 1.2, < 3)
     rack (2.2.3)
-    ruby2_keywords (0.0.4)
+    ruby2_keywords (0.0.5)
 
 PLATFORMS
   x86_64-darwin-20
