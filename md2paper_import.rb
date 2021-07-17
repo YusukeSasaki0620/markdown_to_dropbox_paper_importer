@@ -6,6 +6,7 @@ require 'thread'
 
 client = DropboxApi::Client.new
 INPUT_DIR = "input_files/"
+FileUtils.mkdir_p(INPUT_DIR)
 PAPER_EXT = ".paper"
 FileUtils.mkdir_p('logs')
 CSV.open('logs/errorlog.csv', 'w', encoding: 'UTF-8') do |log_csv|
